@@ -2,6 +2,8 @@
 
 Does the same thing as [Jia Hao's Brat](https://github.com/skewedlines/brat/) but it was developed separately. Who knows, maybe we have different bugs, give it a try.
 
+A local annotation feature has also been added. This feature saves your annotation onto a local .ann file which can be uploaded to brat along with your original copy of your text file. I'm assuming the TA would be more than happy to accept these files since they are probably going do export it from the online portal anyway.
+
 ## Introduction
 
 *Shameless ripoff of Jia Hao's README*
@@ -90,6 +92,32 @@ If you have a ton of errors, I suggest deleting everything like such
 python annotater.py 1000XXX del 1 5000
 ```
 
+Local Annotations
+---
+Assuming your working directory is the same location as all the files, run
+
+```
+python annotater.py <username> local <masterpath> <annotationpath>
+```
+*<masterpath>* - the path to your master file, it is assumed to be master.txt if left blank
+*<annotationpath>* - the path to your annotated file, it is assumed to be annotations.txt if left blank
+
+Don't try to use only one filename, it will cock up and die.
+
+If I named my files nicely, I can run
+```
+python annotater.py 1000XXX send
+```
+otherwise,
+```
+python annotater.py 1000XXX local masterlolol.txt lolannotations.txt
+```
+
+This will create a file called modifications.txt which will should be renamed to <originalfilename>.ann
+
+After you tar-gzip the original textfile and ann file. You should be able to import the resulting annotation and text onto brat. Alternatively just email the TA the annotations.
+
+If you installed a local copy of brat, simply drag create a new folder under your brat's directory's data folder, and place both files inside. Restart brat, and you will be able to open your annotated file locally.
 
 ## Annotations
 
