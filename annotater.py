@@ -105,9 +105,17 @@ if __name__ == "__main__":
 				removeAnnotations([[100,101]], "T{0}".format(str(i)))
 		except:			
 			removeAnnotations([[100,101]], "T{0}".format(str(sys.argv[3])))
-	if command == "send":
+	elif command == "send":
 		try:
 			annotater_parser.parseAnnotations(sys.argv[3], sys.argv[4])
 		except:
 			annotater_parser.parseAnnotations()
 		sendAnnotations()
+	elif command == "local":
+		# try:
+			annotater_parser.parseAnnotations(sys.argv[3], sys.argv[4])
+		# except:
+		# 	annotater_parser.parseAnnotations()
+
+
+
