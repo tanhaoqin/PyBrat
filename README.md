@@ -94,3 +94,6 @@ python annotater.py 1000XXX del 1 5000
 ## Annotations
 
 TAGS CANNOT BE NESTED YOU HAVE BEEN WARNED
+
+### Credits
+[Jia Hao](https://github.com/skewedlines) for his collaboration and insight. I think PyBrat is stupider than his Brat, but hopefully some stupidity means fewer bugs.
